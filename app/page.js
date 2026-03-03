@@ -1,8 +1,23 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import MenuHighlights from './components/MenuHighlights';
+import Gallery from './components/Gallery';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
 export default function Home() {
   return (
-    <div>
-      <h1>Welcome to The Daily Drip ☕</h1>
-      <p>Your favorite coffee place.</p>
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <MenuHighlights />
+        <Gallery />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
