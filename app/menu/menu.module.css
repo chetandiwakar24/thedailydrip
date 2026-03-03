@@ -1,0 +1,158 @@
+.main {
+    padding-top: 0;
+}
+
+/* Page Hero */
+.pageHero {
+    position: relative;
+    height: 50vh;
+    min-height: 380px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.heroBg {
+    position: absolute;
+    inset: 0;
+}
+
+.heroBg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 6, 2, 0.9) 0%, rgba(10, 6, 2, 0.5) 60%, rgba(10, 6, 2, 0.3) 100%);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 4rem;
+}
+
+.heroLabel {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--primary);
+    border: 1px solid rgba(200, 129, 58, 0.35);
+    padding: 0.3rem 0.9rem;
+    border-radius: 50px;
+}
+
+.heroContent h1 {
+    margin-bottom: 0.75rem;
+}
+
+.heroContent p {
+    font-size: 1rem;
+    color: rgba(245, 237, 224, 0.7) !important;
+}
+
+/* Menu Section */
+.menuSection {
+    background: var(--bg);
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0;
+}
+
+.tab {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 0.75rem 1.5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    margin-bottom: -1px;
+    letter-spacing: 0.04em;
+}
+
+.tab:hover {
+    color: var(--text);
+}
+
+.tabActive {
+    color: var(--primary) !important;
+    border-bottom-color: var(--primary) !important;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.menuCard {
+    padding: 1.5rem;
+}
+
+.cardInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.cardInner>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardInner strong {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.cardInner span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.55;
+}
+
+.price {
+    color: var(--accent);
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tabs {
+        gap: 0.25rem;
+    }
+
+    .tab {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.82rem;
+    }
+}

@@ -1,0 +1,113 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.bgImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 6, 2, 0.88) 0%, rgba(15, 10, 5, 0.55) 60%, rgba(10, 6, 2, 0.7) 100%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding-top: 6rem;
+}
+
+.label {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 600;
+    border: 1px solid rgba(200, 129, 58, 0.3);
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(4px);
+}
+
+.content h1 {
+    max-width: 700px;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(245, 237, 224, 0.75) !important;
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.stats {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.stat span {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
+.scrollHint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    color: var(--primary);
+    opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+    .stats {
+        gap: 1.5rem;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}
